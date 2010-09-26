@@ -1,10 +1,11 @@
 Map Clustering Prototype
 ------------------------
-This Project will demonstrate the ability to cluster annotation pins on a Mapkit map view.
-The prototype currently uses a database containing POI data. There is around 2500 POI in the
-database.
+This Project will demonstrate the ability to cluster annotation pins on a Mapkit map view. 
+The project is very rough and I am new to Objective-C so still learning.
+The prototype currently generates 400 random map points based on the current Region of the map.
+Also the map defaults to Melbourne CBD as the starting point.
 
-The current clustering is based on pixels on the screen and the distance between them. This is effective.
+The current clustering is based on pixels on the screen and the distance between them.
 The current demo will cluster all annotations on the current map region. So when the map
 region moves all annotations are removed and re-clustered. This does work but I rekon doesn't
 look that seemless to the user.

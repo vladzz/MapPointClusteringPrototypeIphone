@@ -1,0 +1,21 @@
+Map Clustering Prototype
+------------------------
+This Project will demonstrate the ability to cluster annotation pins on a Mapkit map view.
+The prototype currently uses a database containing POI data. There is around 2500 POI in the
+database.
+
+The current clustering is based on pixels on the screen and the distance between them. This is effective.
+The current demo will cluster all annotations on the current map region. So when the map
+region moves all annotations are removed and re-clustered. This does work but I rekon doesn't
+look that seemless to the user.
+
+Mainly cluster classes
+----------------------
+AssetClusterAnnotation - Represents a visual annotation on the map that can be made up of 1 or more annotations
+AnnotationClusterer - Does the hard work of getting a annotation and putting it into the correct cluster annotation.
+
+
+TO-DO List
+----------
+- Only re-cluster when the map zoom changes
+- Only re-cluster new points as they are added.

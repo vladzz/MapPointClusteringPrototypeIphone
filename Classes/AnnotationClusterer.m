@@ -51,15 +51,13 @@
 }
 
 -(void) addAnnotation:(<MKAnnotation>)annotation {  
-  CGPoint point = CGPointMake(0,0);
-  point = [self.mapView convertCoordinate:annotation.coordinate toPointToView:self.mapView];
+  CGPoint point = [self.mapView convertCoordinate:annotation.coordinate toPointToView:self.mapView];
     
   AssetClusterAnnotation *cluster = nil;
   
   for(AssetClusterAnnotation *arrayCluster in clusters) {
     if(arrayCluster.centerLatitude != 0.0 && arrayCluster.centerLongitude != 0.0) {
-      CGPoint clusterCenterPoint = CGPointMake(0,0);
-      clusterCenterPoint = [self.mapView convertCoordinate:arrayCluster.coordinate toPointToView:self.mapView];
+      CGPoint clusterCenterPoint = [self.mapView convertCoordinate:arrayCluster.coordinate toPointToView:self.mapView];
             
       // Found a cluster which contains the marker.
       if (point.x >= clusterCenterPoint.x - gridSize && point.x <= clusterCenterPoint.x + gridSize &&

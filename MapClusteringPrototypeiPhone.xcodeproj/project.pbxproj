@@ -17,7 +17,6 @@
 		56F87E1911E8304000D2023F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56F87E1711E8304000D2023F /* MainWindow.xib */; };
 		56F87E1A11E8304000D2023F /* MapClusteringPrototypeiPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56F87E1811E8304000D2023F /* MapClusteringPrototypeiPhoneViewController.xib */; };
 		56F87E4511E8311B00D2023F /* ListClusterAnnotationsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56F87E4411E8311B00D2023F /* ListClusterAnnotationsController.xib */; };
-		8529B2CA11DC605800D1505B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8529B2C911DC605800D1505B /* libsqlite3.dylib */; };
 		8529B2D511DC60C500D1505B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8529B2D411DC60C500D1505B /* MapKit.framework */; };
 		8529B32611DC63F700D1505B /* AssetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8529B32511DC63F700D1505B /* AssetController.m */; };
 		8529B3BE11DC6AD500D1505B /* AssetAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8529B3BD11DC6AD500D1505B /* AssetAnnotation.m */; };
@@ -41,7 +40,6 @@
 		56F87E1711E8304000D2023F /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = xibs/MainWindow.xib; sourceTree = "<group>"; };
 		56F87E1811E8304000D2023F /* MapClusteringPrototypeiPhoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MapClusteringPrototypeiPhoneViewController.xib; path = xibs/MapClusteringPrototypeiPhoneViewController.xib; sourceTree = "<group>"; };
 		56F87E4411E8311B00D2023F /* ListClusterAnnotationsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ListClusterAnnotationsController.xib; path = xibs/ListClusterAnnotationsController.xib; sourceTree = "<group>"; };
-		8529B2C911DC605800D1505B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		8529B2D411DC60C500D1505B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8529B32411DC63F700D1505B /* AssetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetController.h; sourceTree = "<group>"; };
 		8529B32511DC63F700D1505B /* AssetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetController.m; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
-				8529B2CA11DC605800D1505B /* libsqlite3.dylib in Frameworks */,
 				8529B2D511DC60C500D1505B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,11 +123,10 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
-				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
-				8529B2C911DC605800D1505B /* libsqlite3.dylib */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				8529B2D411DC60C500D1505B /* MapKit.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

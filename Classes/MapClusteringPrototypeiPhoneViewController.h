@@ -2,7 +2,8 @@
 //  MapClusteringPrototypeiPhoneViewController.h
 //  MapClusteringPrototypeiPhone
 //
-//  Created by Vlado Grancaric on 1/07/10.
+//  Created by Vlado Grancaric on 01/07/10.
+//  Modifications by Sadat Rahman on 20/02/2011.
 //  Copyright VLADZZ
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,24 +25,13 @@
 //  THE SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
-#import "AnnotationClusterer.h"
-#import "AssetClusterAnnotation.h"
-#import "ListClusterAnnotationsController.h"
 
-@interface MapClusteringPrototypeiPhoneViewController : UIViewController <MKMapViewDelegate>{
-  NSOperationQueue *queue; // the queue of NSOperations mainly for asset changes. 
-  AnnotationClusterer *clusterer;  
-  MKMapView *localMapView;
-  
-}
+@interface MapClusteringPrototypeiPhoneViewController : UIViewController <MKMapViewDelegate>
+@property (nonatomic, retain) IBOutlet MKMapView *localMapView;
 
-@property(nonatomic,retain) IBOutlet MKMapView *localMapView;
 
 // This method is called as part of an operation queue. The |value| object is actually
 // a MKCoordinateRegion type.
-- (void) updateAssetsOnRegion: (NSValue*) value;
-
+- (void)updateAssetsOnRegion:(NSValue *)value;
 @end
 

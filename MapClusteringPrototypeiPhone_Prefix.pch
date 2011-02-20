@@ -2,7 +2,14 @@
 // Prefix header for all source files of the 'MapClusteringPrototypeiPhone' target in the 'MapClusteringPrototypeiPhone' project
 //
 
+
 #ifdef __OBJC__
+	#import <CoreGraphics/CoreGraphics.h>
     #import <Foundation/Foundation.h>
-    #import <UIKit/UIKit.h>
+	#import <MapKit/MapKit.h>
+	#import <UIKit/UIKit.h>
 #endif
+
+
+#define DO_RELEASE_SAFELY(pointer) { [pointer release], pointer = nil; }
+

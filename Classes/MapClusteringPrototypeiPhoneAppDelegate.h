@@ -24,14 +24,14 @@
 //  THE SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
 
 @class MapClusteringPrototypeiPhoneViewController;
 
-@interface MapClusteringPrototypeiPhoneAppDelegate : NSObject <UIApplicationDelegate> {
+
+@interface MapClusteringPrototypeiPhoneAppDelegate : NSObject <UIApplicationDelegate>
+{
     UIWindow *window;
     UINavigationController *viewController;
-  
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

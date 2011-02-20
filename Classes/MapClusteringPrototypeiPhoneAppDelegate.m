@@ -24,8 +24,10 @@
 //  THE SOFTWARE.
 //
 
+
 #import "MapClusteringPrototypeiPhoneAppDelegate.h"
 #import "MapClusteringPrototypeiPhoneViewController.h"
+
 
 @implementation MapClusteringPrototypeiPhoneAppDelegate
 
@@ -33,8 +35,8 @@
 @synthesize viewController;
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     // Override point for customization after app launch    
     [window addSubview:viewController.view];
     [window makeKeyAndVisible];
@@ -43,16 +45,11 @@
 }
 
 
-- (void)dealloc {
+- (void)dealloc
+{
     [viewController release];
     [window release];
     [super dealloc];
-}
-
-// Saves changes in the application's managed object context before the
-// application terminates.
-- (void) applicationWillTerminate: (UIApplication *) application {
-  
 }
 
 @end

@@ -82,14 +82,18 @@
   return NO;
 }
 
--(int) totalMarkers {
-  return [annotations count];
+- (int)totalMarkers
+{
+	return [annotations count];
 }
+
 
 - (void)dealloc
 {
-  [annotations release];
-  [super dealloc];
+	[mapView release];
+	[clusterer release];
+	[annotations release];
+	[super dealloc];
 }
-
 @end
+

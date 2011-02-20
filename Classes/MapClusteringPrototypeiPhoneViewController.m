@@ -99,12 +99,9 @@
 	NSInvocationOperation *invocationOperation = [[NSInvocationOperation alloc] initWithTarget:self
 																					  selector:@selector(updateAssetsOnRegion:)
 																						object:regionAsValue];
-	if (invocationOperation != nil)
-	{
-		// Cancel any previous operations before we proceed with this one.
-		[[self operationQueue] cancelAllOperations];
-		[[self operationQueue] addOperation:invocationOperation];
-	}
+	// Cancel any previous operations before we proceed with this one.
+	[[self operationQueue] cancelAllOperations];
+	[[self operationQueue] addOperation:invocationOperation];
 
 	DO_RELEASE_SAFELY(invocationOperation);
 }

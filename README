@@ -10,6 +10,8 @@ The current demo will cluster all annotations on the current map region. So when
 region moves all annotations are removed and re-clustered. This does work but I rekon doesn't
 look that seemless to the user.
 
+This implementation is based on the work done by Xiaoxi Wu who implemented a Javascript library which did a very similar thing. For details on how he did it and how it works refer to this link http://googlegeodevelopers.blogspot.com/2009/04/markerclusterer-solution-to-too-many.html
+
 Mainly cluster classes
 ----------------------
 AssetClusterAnnotation - Represents a visual annotation on the map that can be made up of 1 or more annotations

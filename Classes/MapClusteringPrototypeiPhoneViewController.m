@@ -41,7 +41,6 @@
 
 
 @interface MapClusteringPrototypeiPhoneViewController ()
-@property (nonatomic, retain) NSOperationQueue *operationQueue;
 @property (nonatomic, retain) AnnotationClusterer *annotationClusterer;
 
 
@@ -54,7 +53,6 @@
 
 #pragma mark -
 #pragma mark Synthesize Properties
-@synthesize operationQueue;
 @synthesize annotationClusterer;
 @synthesize localMapView;
 
@@ -63,7 +61,6 @@
 #pragma mark NSObject Methods
 - (void)dealloc
 {
-	[self setOperationQueue:nil];
 	[self setAnnotationClusterer:nil];
 	[self setLocalMapView:nil];
 	[super dealloc];
@@ -75,7 +72,6 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	[self setOperationQueue:[[[NSOperationQueue alloc] init] autorelease]];
 
 	CLLocationCoordinate2D centerPoint = {kCenterPointLatitude, kCenterPointLongitude};
 	MKCoordinateSpan coordinateSpan = MKCoordinateSpanMake(kSpanDeltaLatitude, kSpanDeltaLongitude);
@@ -96,14 +92,7 @@
 	MKCoordinateRegion currentRegion = [aMapView region];
 	NSValue *regionAsValue = [NSValue valueWithBytes:&currentRegion objCType:@encode(MKCoordinateRegion)];
 
-	NSInvocationOperation *invocationOperation = [[NSInvocationOperation alloc] initWithTarget:self
-																					  selector:@selector(updateAssetsOnRegion:)
-																						object:regionAsValue];
-	// Cancel any previous operations before we proceed with this one.
-	[[self operationQueue] cancelAllOperations];
-	[[self operationQueue] addOperation:invocationOperation];
-
-	DO_RELEASE_SAFELY(invocationOperation);
+    [self performSelectorOnMainThread:@selector(updateAssetsOnRegion:) withObject:regionAsValue waitUntilDone:YES];    
 }
 
 
